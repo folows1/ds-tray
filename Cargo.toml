@@ -1,0 +1,16 @@
+[package]
+name = "ds-tray"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+hidapi = "2"
+tray-icon = "0.19"
+tao = "0.30"
+
+[profile.release]
+opt-level = "z"
+lto = true
+strip = true
+codegen-units = 1
+panic = "abort"
